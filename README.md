@@ -107,7 +107,6 @@ indyforge/
 │       └── config_worker.py      # Cross-ecosystem configuration analyzer
 ├── examples/
 │   └── orderservice/             # Sample Spring Boot service
-└── docs/                         # Sample generated output
 ```
 
 ---
