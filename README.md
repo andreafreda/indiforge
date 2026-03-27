@@ -1,5 +1,7 @@
 # 🏛️ IndyForge
 
+[English] | [**Italiano**](README_it.md)
+
 > "Raiders of the Lost Architecture"
 
 AI-powered multi-agent tool that scans any microservice(s) and generates full architecture documentation automatically.
@@ -14,8 +16,6 @@ Check our [**Newbie Guide**](guides/GUIDE_FOR_NEWBIES_en.md) to get started!
 
 ## 📖 Documentation
 - [English Newbie Guide](guides/GUIDE_FOR_NEWBIES_en.md)
-- [Guida per Principianti (Italiano)](guides/GUIDE_FOR_NEWBIES_it.md)
-
 ---
 
 ## 🚀 Quickstart
