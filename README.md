@@ -2,12 +2,19 @@
 
 > "Raiders of the Lost Architecture"
 
-**AI-powered multi-agent tool that scans any microservice(s) and generates full architecture documentation automatically.**
+AI-powered multi-agent tool that scans any microservice(s) and generates full architecture documentation automatically.
+Check our [**Newbie Guide**](guides/GUIDE_FOR_NEWBIES_en.md) to get started!
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://python.org)
 [![LangGraph](https://img.shields.io/badge/LangGraph-0.1.5-green)](https://langchain-ai.github.io/langgraph)
 [![Ollama](https://img.shields.io/badge/LLM-MultiProvider-brightgreen)](https://ollama.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
+---
+
+## 📖 Documentation
+- [English Newbie Guide](guides/GUIDE_FOR_NEWBIES_en.md)
+- [Guida per Principianti (Italiano)](guides/GUIDE_FOR_NEWBIES_it.md)
 
 ---
 

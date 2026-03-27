@@ -1,5 +1,7 @@
 # 👶 Guida per Newbie a IndyForge
 
+[**English**](GUIDE_FOR_NEWBIES_en.md) | [Italiano]
+
 Benvenuto in **IndyForge**! Se non hai mai usato questo strumento (o se l'intelligenza artificiale applicata all'architettura software ti sembra magia nera), sei nel posto giusto. Questa guida ti porterà passo-passo dall'installazione fino alla lettura dei tuoi primi documenti generati.
 
 ---
