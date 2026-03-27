@@ -1,0 +1,2 @@
+[console_scripts]
+indyforge = indyforge.cli:main

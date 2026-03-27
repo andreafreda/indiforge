@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: indyforge
+Version: 0.1.0
+Summary: Raiders of the Lost Architecture – AI multi-agent docs generator
+Requires-Python: >=3.11
+Requires-Dist: langgraph>=0.1.5
+Requires-Dist: langchain-community
+Requires-Dist: langchain-ollama
+Requires-Dist: tree-sitter
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

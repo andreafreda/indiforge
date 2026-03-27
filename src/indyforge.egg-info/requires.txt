@@ -1,0 +1,6 @@
+langgraph>=0.1.5
+langchain-community
+langchain-ollama
+tree-sitter
+click
+python-dotenv

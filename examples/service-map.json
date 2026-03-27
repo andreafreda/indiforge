@@ -1,0 +1,13 @@
+{
+  "services": [
+    "orders",
+    "payments"
+  ],
+  "cross_deps": [
+    {
+      "from": "orders",
+      "to": "payments",
+      "type": "grpc"
+    }
+  ]
+}
