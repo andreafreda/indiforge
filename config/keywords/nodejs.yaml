@@ -1,0 +1,82 @@
+# ── Node.js / TypeScript keywords ─────────────────────────────────────────────
+
+api_keywords:
+  # Express
+  - "router.get"
+  - "router.post"
+  - "router.put"
+  - "router.delete"
+  - "router.patch"
+  - "app.get("
+  - "app.post("
+  - "app.put("
+  - "app.delete("
+  # NestJS
+  - "@Controller"
+  - "@Get("
+  - "@Post("
+  - "@Put("
+  - "@Delete("
+  - "@Patch("
+  # SOAP (node-soap / soap package)
+  - "node-soap"
+  - "soap.createClient"
+  - "wsdl"
+  - "WSDL"
+
+event_keywords:
+  # Kafka
+  - "kafka"
+  - "KAFKA"
+  - "kafkajs"
+  - "KafkaProducer"
+  - "KafkaConsumer"
+  # RabbitMQ / AMQP
+  - "amqp"
+  - "AMQP"
+  - "rabbitmq"
+  - "RabbitMQ"
+  - "amqplib"
+  # AWS SQS/SNS
+  - "sqs"
+  - "sns"
+  - "SQSClient"
+  - "SNSClient"
+  # Azure Service Bus
+  - "ServiceBusClient"
+  # Generic
+  - "EventEmitter"
+  - "consumer"
+  - "producer"
+  - "subscriber"
+  - "publisher"
+
+security_keywords:
+  - "passport"
+  - "jsonwebtoken"
+  - "express-jwt"
+  - "JWT"
+  - "jwt"
+  - "OAuth"
+  - "oauth"
+  - "Bearer"
+  - "bcrypt"
+  - "password"
+  - "secret"
+  - "cors"
+  - "CORS"
+  - "csrf"
+  - "CSRF"
+  - "SSL"
+  - "TLS"
+  - "helmet"
+
+sequence_keywords:
+  - "router.get"
+  - "router.post"
+  - "app.get("
+  - "@Controller"
+  - "Service"
+  - "service"
+  - "Repository"
+  - "repository"

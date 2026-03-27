@@ -1,0 +1,98 @@
+# ── Java / Kotlin keywords ─────────────────────────────────────────────────────
+
+api_keywords:
+  # Spring REST
+  - "@RestController"
+  - "@Controller"
+  - "@RequestMapping"
+  - "@GetMapping"
+  - "@PostMapping"
+  - "@PutMapping"
+  - "@DeleteMapping"
+  - "@PatchMapping"
+  # JAX-WS SOAP
+  - "@WebService"
+  - "@WebMethod"
+  - "@SOAPBinding"
+  # JAX-RS
+  - "@Path"
+  - "@GET"
+  - "@POST"
+  - "@PUT"
+  - "@DELETE"
+  # gRPC
+  - "extends AbstractStub"
+  - "BlockingStub"
+  - "FutureStub"
+
+event_keywords:
+  # Kafka
+  - "@KafkaListener"
+  - "KafkaTemplate"
+  - "KafkaProducer"
+  - "KafkaConsumer"
+  - "kafka"
+  - "KAFKA"
+  # RabbitMQ
+  - "@RabbitListener"
+  - "RabbitTemplate"
+  - "amqp"
+  - "AMQP"
+  - "RabbitMQ"
+  - "rabbitmq"
+  # JMS
+  - "@JmsListener"
+  - "JmsTemplate"
+  - "jms"
+  # AWS SQS / SNS
+  - "SqsClient"
+  - "SnsClient"
+  - "sqs"
+  - "sns"
+  # Generic
+  - "MessageListener"
+  - "EventHandler"
+  - "consumer"
+  - "producer"
+  - "subscriber"
+  - "publisher"
+
+security_keywords:
+  - "JWT"
+  - "jwt"
+  - "OAuth"
+  - "oauth"
+  - "Bearer"
+  - "@PreAuthorize"
+  - "@Secured"
+  - "@RolesAllowed"
+  - "spring-security"
+  - "SecurityFilterChain"
+  - "WebSecurityConfigurerAdapter"
+  - "CORS"
+  - "cors"
+  - "CSRF"
+  - "csrf"
+  - "bcrypt"
+  - "password"
+  - "secret"
+  - "SSL"
+  - "TLS"
+  - "certificate"
+  - "encrypt"
+  - "decrypt"
+  - "hash"
+
+sequence_keywords:
+  - "@RestController"
+  - "@Controller"
+  - "@Service"
+  - "@Component"
+  - "@Injectable"
+  - "Service"
+  - "service"
+  - "@Repository"
+  - "Repository"
+  - "repository"
+  - "JpaRepository"
+  - "CrudRepository"

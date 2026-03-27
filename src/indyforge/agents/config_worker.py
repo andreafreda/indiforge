@@ -1,5 +1,7 @@
 
 from indyforge.config import CODE_MODEL, make_llm, LANGUAGE
+from indyforge.config_loader import load_prompt
+from indyforge.agents.file_reader import SKIP_DIRS
 import os, glob
 
 code_llm = make_llm(CODE_MODEL)
@@ -78,8 +80,10 @@ def find_config_files(repo_path: str) -> dict:
         for pattern in patterns:
             matches = glob.glob(f"{repo_path}/{pattern}", recursive=True)
             for path in matches:
-                # Skip node_modules, .git, build dirs
-                if any(x in path for x in ["node_modules", ".git", "build", "target", "dist", "bin", "obj"]):
+                # Skip ignored directories using shared SKIP_DIRS (path component check)
+                rel = os.path.relpath(path, repo_path)
+                parts = rel.replace("\\", "/").split("/")
+                if any(skip in parts for skip in SKIP_DIRS):
                     continue
                 try:
                     with open(path, "r", errors="ignore") as f:
@@ -96,7 +100,7 @@ def config_worker(state: dict) -> dict:
     configs = find_config_files(state["repo_path"])
 
     if not configs:
-        return {"config_result": "_No configuration files found._"}
+        return {"config_result": "_No configuration files found._", "source_evidence": ["[config_worker] No config files found."]}
 
     # Build content grouped by ecosystem
     grouped = {}
@@ -106,39 +110,37 @@ def config_worker(state: dict) -> dict:
             grouped[eco] = []
         grouped[eco].append((path, data["content"]))
 
+    MAX_CHARS = 20000
     all_content = ""
+    truncated = False
     for eco, files in grouped.items():
-        all_content += f"\n## Ecosystem: {eco.upper()}\n"
+        if truncated:
+            break
+        eco_block = f"\n## Ecosystem: {eco.upper()}\n"
         for path, content in files:
             segment = f"\n### {path}\n```\n{content[:3000]}\n```\n"
-            if len(all_content) + len(segment) > 12000:
-                all_content += "\n\n[WARNING: Global limit of 12000 characters reached. Some configurations were truncated.]\n"
+            if len(all_content) + len(eco_block) + len(segment) > MAX_CHARS:
+                all_content += eco_block
+                all_content += "\n[Truncated: character limit reached, remaining files omitted.]\n"
+                truncated = True
                 break
-            all_content += segment
-        if "> 12000" in all_content or len(all_content) > 12000:
-            break
+            eco_block += segment
+        if not truncated:
+            all_content += eco_block
 
-    result = code_llm.invoke(f"""
-    Analyze these configuration files from a microservice:
+    result = code_llm.invoke(load_prompt(
+        "config_worker",
+        all_content=all_content,
+        LANGUAGE=LANGUAGE,
+    ))
 
-    {all_content}
+    # Build evidence manifest for the verifier (like all other workers)
+    manifest_lines = [f"[config_worker] {len(configs)} config file(s) found:"]
+    for path in configs:
+        rel_path = os.path.relpath(path, state["repo_path"])
+        eco = configs[path]["ecosystem"]
+        size = len(configs[path]["content"])
+        manifest_lines.append(f"  - {rel_path} ({size} chars) [{eco}]")
+    manifest = "\n".join(manifest_lines)
 
-    For EVERY configuration key found, generate a markdown table:
-    | Key | Value | Purpose | Notes |
-
-    Rules:
-    - Mask passwords/secrets/tokens as [MASKED]
-    - Purpose: plain English explanation of what this key does
-    - Notes: warn hardcoded values, missing env vars, non-default ports, risky settings
-    - Group output by ecosystem (Spring, .NET, Node, Infra, etc.)
-
-    Example rows:
-    | ConnectionStrings.DefaultConnection | [MASKED] | SQL Server connection string for main DB | ⚠️ Should use env var |
-    | Logging.LogLevel.Default | Warning | Minimum log level for all namespaces | Consider Debug in dev |
-    | ASPNETCORE_ENVIRONMENT | Production | ASP.NET Core runtime environment | ✅ Correctly set |
-    | spring.kafka.consumer.max-poll-records | 100 | Max Kafka records per poll | Tune for throughput |
-
-    All your output MUST be in {LANGUAGE}.
-    """)
-
-    return {"config_result": result}
+    return {"config_result": result, "source_evidence": [manifest]}

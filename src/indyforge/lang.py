@@ -14,6 +14,12 @@ TRANSLATIONS = {
         "sequence_done": "  ✅ [sequence_worker] Done.",
         "config_extract": "  ⚙️  [config_worker]   Reading config files...",
         "config_done": "  ✅ [config_worker]   Done.",
+        "tree_extract": "  🏗️  [tree_worker]     Building annotated file tree...",
+        "tree_done": "  ✅ [tree_worker]     Done.",
+        "phase_workers": "\n------------------------------------------------\n  🚀 Launching {n} workers in parallel...\n------------------------------------------------",
+        "phase_workers_seq": "\n------------------------------------------------\n  🚀 Launching {n} workers sequentially...\n------------------------------------------------",
+        "phase_workers_conc": "\n------------------------------------------------\n  🚀 Launching {n} workers (max concurrency: {c})...\n------------------------------------------------",
+        "worker_done_timed": "  ✅ [{worker}] Done. ({elapsed}) {progress}",
         "aggregator_write": "  📝 [aggregator]      Writing overview.md (iteration {it}/3)...",
         "aggregator_done": "  ✅ [aggregator]      Draft ready.",
         "verifier_check": "  🔍 [verifier]        Checking quality & grounding...",
@@ -32,7 +38,11 @@ TRANSLATIONS = {
         "cache_found": "💾 Found previous cache/checkpoint data. Do you want to use it? (Say No to delete and start from scratch)",
         "cache_used": "♻️ Utilizing existing cache data.",
         "cache_deleted": "🗑️ Cache deleted. Starting from scratch.",
-        "cache_flag": "🗑️ Cache deleted via --no-cache flag."
+        "cache_flag": "🗑️ Cache deleted via --no-cache flag.",
+        "cache_hit": "  ⚡ [{worker}] Restored from checkpoint. {progress}",
+        "cache_cleanup": "🧹 Checkpoints cleaned up (scan completed successfully).",
+        "scan_crash": "\n💥 Scan failed: {error}\n💾 Checkpoints preserved — re-run to resume from where it stopped.",
+        "scan_complete": "────────────────────────────────────────────────\n  ⏱️  Scan complete in {elapsed}\n────────────────────────────────────────────────",
     },
     "italian": {
         "deps_extract": "  📦 [deps_worker]     Estrazione dipendenze...",
@@ -47,6 +57,12 @@ TRANSLATIONS = {
         "sequence_done": "  ✅ [sequence_worker] Fatto.",
         "config_extract": "  ⚙️  [config_worker]   Lettura file di configurazione...",
         "config_done": "  ✅ [config_worker]   Fatto.",
+        "tree_extract": "  🏗️  [tree_worker]     Costruzione alberatura annotata...",
+        "tree_done": "  ✅ [tree_worker]     Fatto.",
+        "phase_workers": "\n------------------------------------------------\n  🚀 Avvio {n} worker in parallelo...\n------------------------------------------------",
+        "phase_workers_seq": "\n------------------------------------------------\n  🚀 Avvio {n} worker in sequenza...\n------------------------------------------------",
+        "phase_workers_conc": "\n------------------------------------------------\n  🚀 Avvio {n} worker (concorrenza max: {c})...\n------------------------------------------------",
+        "worker_done_timed": "  ✅ [{worker}] Fatto. ({elapsed}) {progress}",
         "aggregator_write": "  📝 [aggregator]      Scrittura overview.md (iterazione {it}/3)...",
         "aggregator_done": "  ✅ [aggregator]      Bozza pronta.",
         "verifier_check": "  🔍 [verifier]        Controllo qualità & allucinazioni...",
@@ -65,7 +81,11 @@ TRANSLATIONS = {
         "cache_found": "💾 Trovati dati di cache/checkpoint precedenti. Vuoi utilizzarli? (Rispondi No per cancellarli e ripartire da zero)",
         "cache_used": "♻️ Utilizzo i dati di cache esistenti.",
         "cache_deleted": "🗑️ Cache eliminata. Riparto da zero.",
-        "cache_flag": "🗑️ Cache eliminata tramite parametro --no-cache."
+        "cache_flag": "🗑️ Cache eliminata tramite parametro --no-cache.",
+        "cache_hit": "  ⚡ [{worker}] Ripristinato dal checkpoint. {progress}",
+        "cache_cleanup": "🧹 Checkpoint eliminati (scansione completata con successo).",
+        "scan_crash": "\n💥 Scansione fallita: {error}\n💾 Checkpoint preservati — rilancia per riprendere da dove si era fermata.",
+        "scan_complete": "────────────────────────────────────────────────\n  ⏱️  Scansione completata in {elapsed}\n────────────────────────────────────────────────",
     }
 }
 

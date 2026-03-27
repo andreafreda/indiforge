@@ -1,0 +1,17 @@
+Below is the file tree and content samples from a microservice codebase.
+
+## File Tree
+{tree_str}
+
+## File Content Samples (first lines of each source file)
+{file_samples}
+
+Reproduce the EXACT file tree above, adding " — brief description" after each 📄 file line.
+Rules:
+- Keep 📁 folder lines EXACTLY unchanged — no description for folders
+- For files with a sample: describe the file's role based on its content
+- For files without a sample: infer the purpose from the file name and its location in the tree
+- Descriptions must be short (max 10 words), strictly technical, no marketing words
+- Output ONLY the annotated tree, with no additional text before or after
+
+All descriptions MUST be in {LANGUAGE}.

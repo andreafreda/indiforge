@@ -1,0 +1,68 @@
+# ── Go keywords ────────────────────────────────────────────────────────────────
+
+api_keywords:
+  # net/http
+  - "HandleFunc"
+  - "http.Handle"
+  - "http.ListenAndServe"
+  # Gin
+  - "gin.Default"
+  - "gin.New"
+  - "r.GET"
+  - "r.POST"
+  - "r.PUT"
+  - "r.DELETE"
+  # Echo
+  - "echo.New"
+  - "e.GET"
+  - "e.POST"
+  # gRPC
+  - "grpc.NewServer"
+  - "pb.Register"
+
+event_keywords:
+  # Kafka
+  - "kafka"
+  - "KAFKA"
+  - "sarama"
+  - "confluent-kafka-go"
+  # NATS
+  - "nats"
+  - "NATS"
+  # RabbitMQ / AMQP
+  - "amqp"
+  - "rabbitmq"
+  # Generic
+  - "consumer"
+  - "producer"
+  - "subscriber"
+  - "publisher"
+
+security_keywords:
+  - "JWT"
+  - "jwt"
+  - "OAuth"
+  - "oauth"
+  - "Bearer"
+  - "bcrypt"
+  - "password"
+  - "secret"
+  - "SSL"
+  - "TLS"
+  - "certificate"
+  - "encrypt"
+  - "decrypt"
+  - "hash"
+  - "cors"
+  - "CORS"
+
+sequence_keywords:
+  - "HandleFunc"
+  - "http.Handle"
+  - "r.GET"
+  - "r.POST"
+  - "grpc.NewServer"
+  - "Service"
+  - "service"
+  - "Repository"
+  - "repository"

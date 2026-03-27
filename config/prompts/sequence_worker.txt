@@ -1,0 +1,9 @@
+Analyze these source files from a microservice (Stack: {stack_context}):
+
+{file_contents}
+
+Build Mermaid sequence diagrams for the top 3 most important endpoints.
+Trace the full call flow: controller -> service -> repository/DB -> event broker.
+Return valid Mermaid sequenceDiagram syntax for each endpoint.
+If not enough code was found, state that clearly.
+All your output MUST be in {LANGUAGE} (except for mermaid syntax which remains in English).

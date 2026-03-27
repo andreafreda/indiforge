@@ -1,0 +1,24 @@
+Analyze these configuration files from a microservice:
+
+{all_content}
+
+For EVERY configuration key found, generate a markdown table:
+| Key | Value | Purpose | Notes |
+
+Rules:
+- Mask passwords/secrets/tokens as [MASKED]
+- Purpose: plain English explanation of what this key does
+- Notes: warn hardcoded values, missing env vars, non-default ports, risky settings
+- Group output by ecosystem (Spring, .NET, Node, Infra, etc.)
+
+STRICT OUTPUT FORMAT: return ONLY the markdown tables, one per ecosystem.
+Do NOT add any commentary, disclaimers, suggestions, or prose outside the tables.
+Do NOT add closing notes, reminders, or offers to analyze more files.
+
+Example rows:
+| ConnectionStrings.DefaultConnection | [MASKED] | SQL Server connection string for main DB | ⚠️ Should use env var |
+| Logging.LogLevel.Default | Warning | Minimum log level for all namespaces | Consider Debug in dev |
+| ASPNETCORE_ENVIRONMENT | Production | ASP.NET Core runtime environment | ✅ Correctly set |
+| spring.kafka.consumer.max-poll-records | 100 | Max Kafka records per poll | Tune for throughput |
+
+All your output MUST be in {LANGUAGE}.

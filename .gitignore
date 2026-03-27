@@ -31,7 +31,7 @@ Thumbs.db
 # Project specific
 docs/
 *.db
-.indyforge_cache/
+**/.indyforge_cache/
 
 # Testing
 .pytest_cache/

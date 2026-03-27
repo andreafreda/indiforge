@@ -1,0 +1,11 @@
+Generate system-overview.md for this microservice ecosystem:
+
+{all_docs}
+
+Include:
+- Service mesh: how services communicate with each other
+- Shared event topics/queues across services
+- Cross-repo dependency risks and version mismatches
+- Recommended architectural improvements
+
+All your output MUST be in {LANGUAGE}.

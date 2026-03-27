@@ -1,0 +1,13 @@
+Analyze these source and config files for security concerns (Stack: {stack_context}):
+
+{file_contents}
+
+Identify:
+- Authentication type (JWT, OAuth2, Basic, API Key, etc.)
+- Authorization patterns (@PreAuthorize, [Authorize], etc.)
+- Known security risks (hardcoded secrets, missing CORS, weak hashing)
+- CVE flags on dependencies if visible
+- Recommendations for improvement
+Return structured markdown.
+If no security-related code was found, state that clearly.
+All your output MUST be in {LANGUAGE}.
