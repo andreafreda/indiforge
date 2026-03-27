@@ -115,7 +115,7 @@ indyforge/
 ## 🤝 Contributing
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/indyforge
+git clone https://github.com/andreafreda/indyforge
 cd indyforge
 pip install -e .
 indyforge scan examples/orderservice
