@@ -50,7 +50,7 @@ IndyForge uses a **two-level MapReduce pattern** for maximum parallelism, orches
 ```
 Multi-Repo Input
        |
-  MAP L1: 1 agent/repo (parallel)
+  MAP L1: 1 thread/repo (ThreadPoolExecutor)
   |         |           |
 orders   payments  notifications
     |
@@ -61,7 +61,7 @@ Deps       API      Events   Security  Sequences   Config
   REDUCE L2: aggregator (drafts overview.md)
        |
   VERIFIER: Strict multi-step checks (Grounding, Completeness, Accuracy, Consistency)
-       |--> Reflection loop (max 3 retries if hallucinations/errors found)
+       |--> Reflection loop → back to Aggregator (max 3 retries if hallucinations/errors found)
        |
 REDUCE L1: system-overview.md (cross-repo map)
 ```
