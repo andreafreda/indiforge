@@ -1,0 +1,9 @@
+Analyze these source files from a microservice (Stack: {stack_context}):
+
+{file_contents}
+
+Extract ALL API endpoints (REST, SOAP, gRPC, GraphQL, JMX).
+Return a markdown table: | Method | Path | Description | Auth Required |
+Include: HTTP method, full path, what it does, whether auth is needed.
+If no API endpoints were found, state that clearly.
+All your output MUST be in {LANGUAGE}.

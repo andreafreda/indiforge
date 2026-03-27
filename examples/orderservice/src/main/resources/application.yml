@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orders
+    username: postgres
+    password: ${DB_PASSWORD}
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
+    consumer:
+      group-id: order-group
+      auto-offset-reset: earliest
+      max-poll-records: 100
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI:https://auth.acme.com}
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.acme.order: DEBUG
+    org.springframework.kafka: INFO
+
+order:
+  retry:
+    max-attempts: 3
+    backoff-ms: 1000
+  cache:
+    ttl-seconds: 300

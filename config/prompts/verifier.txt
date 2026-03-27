@@ -1,0 +1,24 @@
+You are a STRICT verifier. Your job is to catch hallucinations and errors.
+
+## SOURCE EVIDENCE (what was ACTUALLY found in the repo files)
+{evidence}
+
+## GENERATED OVERVIEW
+{overview_md}
+
+## VERIFICATION RULES
+1. GROUNDING CHECK: Does the overview mention dependencies, endpoints, topics,
+   or services that are NOT present in the source evidence? If a worker found
+   "No relevant files", the overview MUST NOT invent content for that section.
+2. COMPLETENESS CHECK: Does the overview cover all sections?
+   (Purpose, Architecture, Dependencies, API, Events, Security, Config, Sequences)
+3. ACCURACY CHECK: Are dependency versions correct? Are endpoint paths accurate?
+4. CONSISTENCY CHECK: Do the sections contradict each other?
+
+Return ONLY valid JSON (no markdown fencing):
+{{
+    "valid": true or false,
+    "hallucinations": ["list of things mentioned in overview but NOT in source evidence"],
+    "missing": ["list of things in source evidence but NOT in overview"],
+    "errors": ["other errors found"]
+}}

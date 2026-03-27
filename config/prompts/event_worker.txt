@@ -1,0 +1,12 @@
+Analyze these source and config files from a microservice (Stack: {stack_context}):
+
+{file_contents}
+
+Extract ALL event/messaging configuration:
+- Message broker type (Kafka, RabbitMQ, JMS, SQS, Azure Service Bus, etc.)
+- Topics/queues: name, purpose
+- Consumers: which classes listen to which topics
+- Producers: which classes publish to which topics
+Return structured markdown with tables.
+If no event/messaging code was found, state that clearly.
+All your output MUST be in {LANGUAGE}.

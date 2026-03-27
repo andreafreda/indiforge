@@ -1,0 +1,11 @@
+Analyze these dependency/build files from a microservice (Stack: {stack_context}):
+
+{file_contents}
+
+Extract ALL dependencies with their exact versions.
+Return a markdown table: | Package | Version | Scope | Risk |
+- Version: exact version from the file (e.g. 3.2.1, ^2.0.0, >=1.5)
+- Scope: compile, runtime, test, dev, optional
+- Risk: flag known CVEs or outdated major versions
+If no dependency files were found, state that clearly.
+All your output MUST be in {LANGUAGE}.

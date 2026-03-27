@@ -1,0 +1,97 @@
+# ── .NET / C# keywords ─────────────────────────────────────────────────────────
+# Add or remove keywords to control which .cs files each worker picks up.
+
+api_keywords:
+  # REST (ASP.NET Core)
+  - "[ApiController]"
+  - "[HttpGet]"
+  - "[HttpPost]"
+  - "[HttpPut]"
+  - "[HttpDelete]"
+  - "[HttpPatch]"
+  - "[Route("
+  - "ControllerBase"
+  - "MinimalApi"
+  # WCF — service side
+  - "[ServiceContract]"
+  - "[OperationContract]"
+  # ASMX legacy
+  - "[WebService]"
+  - "[WebMethod]"
+  # WCF — bindings & infrastructure
+  - "BasicHttpBinding"
+  - "WSHttpBinding"
+  - "NetTcpBinding"
+  - "NetNamedPipeBinding"
+  - "System.ServiceModel"
+  - "System.Web.Services"
+  # SOAP — client side (auto-generated proxies / Add Service Reference)
+  - "SoapClient"
+  - "SoapAction"
+  - "SOAPAction"
+  - "ServiceReference"
+  - "ClientBase"
+  - "ChannelFactory"
+
+event_keywords:
+  # Azure Service Bus
+  - "ServiceBusClient"
+  - "ServiceBusSender"
+  - "ServiceBusProcessor"
+  - "servicebus"
+  # Azure Event Hubs
+  - "EventHubProducerClient"
+  - "EventHubConsumerClient"
+  - "eventhub"
+  # MassTransit / NServiceBus / Rebus
+  - "MassTransit"
+  - "NServiceBus"
+  - "IBus"
+  - "IConsumer"
+  - "IPublishEndpoint"
+  # Generic
+  - "MessageHandler"
+  - "EventHandler"
+  - "consumer"
+  - "producer"
+  - "subscriber"
+  - "publisher"
+
+security_keywords:
+  - "[Authorize]"
+  - "[AllowAnonymous]"
+  - "AddAuthentication"
+  - "AddJwtBearer"
+  - "AddOpenIdConnect"
+  - "IdentityServer"
+  - "Microsoft.Identity"
+  - "JWT"
+  - "jwt"
+  - "OAuth"
+  - "oauth"
+  - "Bearer"
+  - "CORS"
+  - "cors"
+  - "CSRF"
+  - "csrf"
+  - "bcrypt"
+  - "password"
+  - "secret"
+  - "SSL"
+  - "TLS"
+  - "certificate"
+  - "encrypt"
+  - "decrypt"
+  - "hash"
+
+sequence_keywords:
+  - "[ApiController]"
+  - "ControllerBase"
+  - "[ServiceContract]"
+  - "DbContext"
+  - "DbSet"
+  - "IRepository"
+  - "Repository"
+  - "repository"
+  - "Service"
+  - "service"

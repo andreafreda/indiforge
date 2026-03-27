@@ -1,0 +1,26 @@
+Generate overview.md for microservice at {repo_path}.
+
+## Detected Stack
+{stack_context}
+
+## 1. Project Purpose
+MANDATORY: Start this section by stating the exact programming language and framework version detected above (e.g. ".NET C# net10.0", "Java 17 / Spring Boot 3.x", "Node.js/TypeScript", etc.).
+Then describe technically the service: main responsibilities, exposed ports, runtime environment. Do not use marketing jargon, hyperboles, or generic words. Keep it strictly technical.
+
+## 2. General Architecture
+## 3. Full Dependencies
+{deps_result}
+## 4. REST/SOAP/gRPC/GraphQL API Endpoints
+{api_result}
+## 5. Event Consumers & Producers
+{event_result}
+## 6. Security & Auth
+{security_result}
+## 7. Configuration Keys
+{config_result}
+## 8. Sequence Diagrams
+{sequence_result}
+## 9. Project File Structure
+{tree_result}
+
+All your text and titles MUST be in {LANGUAGE}.

@@ -1,0 +1,78 @@
+# ── Python keywords ────────────────────────────────────────────────────────────
+
+api_keywords:
+  # Flask
+  - "@app.route"
+  - "Blueprint"
+  # FastAPI
+  - "@router."
+  - "APIRouter"
+  - "FastAPI"
+  # Django REST Framework
+  - "APIView"
+  - "ViewSet"
+  - "@api_view"
+  - "path("
+  - "re_path("
+  # Zeep / Suds (SOAP clients)
+  - "zeep"
+  - "suds"
+  - "SOAPClient"
+
+event_keywords:
+  # Kafka
+  - "kafka"
+  - "KAFKA"
+  - "confluent_kafka"
+  - "KafkaProducer"
+  - "KafkaConsumer"
+  # RabbitMQ / Celery
+  - "pika"
+  - "celery"
+  - "Celery"
+  - "amqp"
+  # AWS
+  - "boto3"
+  - "sqs"
+  - "sns"
+  # Generic
+  - "EventHandler"
+  - "event_handler"
+  - "consumer"
+  - "producer"
+  - "subscriber"
+  - "publisher"
+
+security_keywords:
+  - "flask_login"
+  - "flask_jwt"
+  - "flask_jwt_extended"
+  - "django.contrib.auth"
+  - "fastapi.security"
+  - "OAuth2PasswordBearer"
+  - "JWT"
+  - "jwt"
+  - "OAuth"
+  - "oauth"
+  - "Bearer"
+  - "bcrypt"
+  - "argon2"
+  - "password"
+  - "secret"
+  - "SSL"
+  - "TLS"
+  - "encrypt"
+  - "decrypt"
+  - "hash"
+  - "cors"
+  - "CORS"
+
+sequence_keywords:
+  - "@app.route"
+  - "@router."
+  - "APIView"
+  - "ViewSet"
+  - "Service"
+  - "service"
+  - "Repository"
+  - "repository"
